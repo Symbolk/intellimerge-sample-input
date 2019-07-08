@@ -7,7 +7,7 @@ public class Movie {
     public static final int NEW_RELEASE = 1;
 
     private String title;
-    private String director;
+    private String mainDirector;
 
     Price price;
 
@@ -21,11 +21,11 @@ public class Movie {
     }
 
     public String getDirector() {
-        return director;
+        return mainDirector;
     }
 
     public void setDirector(String director) {
-        this.director = director;
+        this.mainDirector = director;
     }
 
     private void setPriceCode(int priceCode) {

@@ -7,6 +7,8 @@ public class Movie {
     public static final int NEW_RELEASE = 1;
 
     private String title;
+    private String director;
+
     Price price;
 
     public Movie(String title, int priceCode) {
@@ -16,6 +18,14 @@ public class Movie {
 
     public String getTitle() {
         return title;
+    }
+
+    public String getDirector() {
+        return director;
+    }
+
+    public void setDirector(String director) {
+        this.director = director;
     }
 
     private void setPriceCode(int priceCode) {
@@ -43,7 +53,7 @@ public class Movie {
     }
 
     public int getFrequentRenterPoints(int daysRented) {
-        return price.getFrequentRenterPoints(daysRented);
+        return price.getPointsOfFrequentRenters(daysRented);
     }
 
 }

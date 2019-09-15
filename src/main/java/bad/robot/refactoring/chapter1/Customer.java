@@ -40,6 +40,10 @@ public class Customer {
     }
 
     private double getTotalCharge() {
+        return computeTotalCharge();
+    }
+
+    private double computeTotalCharge() {
         double total = 0;
         for (Rental rental : rentals)
             total += rental.getCharge();

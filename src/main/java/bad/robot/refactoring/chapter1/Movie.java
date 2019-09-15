@@ -11,14 +11,6 @@ public class Movie {
 
     public Movie(String title, int priceCode) {
         this.title = title;
-        setPriceCode(priceCode);
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    private void setPriceCode(int priceCode) {
         switch (priceCode) {
             case CHILDREN:
                 price = new ChildrensPrice();
@@ -32,6 +24,10 @@ public class Movie {
             default:
                 throw new IllegalArgumentException("invalid price code");
         }
+    }
+
+    public String getTitle() {
+        return title;
     }
 
     private int getPriceCode() {
